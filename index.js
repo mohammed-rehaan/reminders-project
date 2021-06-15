@@ -2,6 +2,7 @@ var express = require('express');
 var mysql = require('mysql');
 var bodyparser = require('body-parser');
 var faker = require('faker');
+let port = process.env.PORT || 8080
 
 var software = express();
 software.set("view engine", "ejs");
@@ -40,6 +41,6 @@ software.post("/done", function (req, res) {
 
 // })
 
-software.listen(8081, function (req, res) {
+software.listen(port, function (req, res) {
     console.log("Listening at 8081");
 })
